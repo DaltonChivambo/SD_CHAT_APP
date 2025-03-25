@@ -58,12 +58,10 @@ app.use((err, req, res, next) => {
 	res.status(500).json({ message: errorMessage });
 });
 
-// Start the server (modificado para escutar em todas as interfaces de rede)
-const server = app.listen(process.env.PORT || 9000, '0.0.0.0', () => {
-    console.log(`Server listening on http://192.168.49.249:9000`);
+// Start the server
+const server = app.listen(PORT, async () => {
+	console.log(`Server listening on ${PORT}`);
 });
-
-
 
 // Socket.IO setup
 const { Server } = require("socket.io");
