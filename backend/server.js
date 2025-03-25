@@ -90,7 +90,7 @@ io.on("connection", (socket) => {
 		let chat = newMessageReceived?.chat;
 		chat?.users.forEach((user) => {
 			if (user._id === newMessageReceived.sender._id) return;
-			console.log("Message received by:", user._id);
+			console.log("Message received by:", user.firstName);
 			socket.in(user._id).emit("message received", newMessageReceived);
 		});
 	};
@@ -123,14 +123,14 @@ io.on("connection", (socket) => {
 	const deleteChatHandler = (chat, authUserId) => {
 		chat.users.forEach((user) => {
 			if (authUserId === user._id) return;
-			console.log("Chat delete:", user._id);
+			console.log("Chat delete:", user.firstName);
 			socket.in(user._id).emit("delete chat", chat._id);
 		});
 	};
 	const chatCreateChatHandler = (chat, authUserId) => {
 		chat.users.forEach((user) => {
 			if (authUserId === user._id) return;
-			console.log("Create chat:", user._id);
+			console.log("Create chat:", user.firstName);
 			socket.in(user._id).emit("chat created", chat);
 		});
 	};
