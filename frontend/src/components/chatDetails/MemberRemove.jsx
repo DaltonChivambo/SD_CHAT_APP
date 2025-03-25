@@ -63,7 +63,7 @@ const MemberRemove = ({ setMemberAddBox }) => {
 						<IoPersonAddOutline fontSize={18} />
 					</div>
 					<span className="w-full line-clamp-1 capitalize">
-						Add members
+						Adicionar Membros
 					</span>
 				</div>
 			)}
@@ -129,7 +129,7 @@ const MemberRemove = ({ setMemberAddBox }) => {
 					<div className="px-2 w-full fixed bottom-1 right-0">
 						<div className="w-full h-12 border-slate-500 bg-blue-950 border rounded-lg flex justify-between items-center p-2 font-semibold gap-2 transition-all cursor-pointer text-white ">
 							<h1 className="line-clamp-1">
-								Confirm removal of '{removeUserName}'?
+								Deseja remover '{removeUserName}'?
 							</h1>
 							<div className="flex gap-1">
 								<div

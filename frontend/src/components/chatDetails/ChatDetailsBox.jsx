@@ -23,7 +23,7 @@ const ChatDetailsBox = () => {
 					title="Overview"
 				>
 					<CiCircleInfo fontSize={18} />
-					<span className="hidden sm:block">Overview</span>
+					<span className="hidden sm:block">Geral</span>
 				</div>
 				{selectedChat?.isGroupChat && (
 					<div
@@ -36,7 +36,7 @@ const ChatDetailsBox = () => {
 						title="Member"
 					>
 						<HiOutlineUsers fontSize={18} />
-						<span className="hidden sm:block">Members</span>
+						<span className="hidden sm:block">Membros</span>
 					</div>
 				)}
 				<div
@@ -49,7 +49,7 @@ const ChatDetailsBox = () => {
 					title="Setting"
 				>
 					<IoSettingsOutline fontSize={18} />
-					<span className="hidden sm:block">Setting</span>
+					<span className="hidden sm:block">Definições</span>
 				</div>
 			</div>
 			<div className="w-full h-[60vh]">

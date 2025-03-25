@@ -10,7 +10,7 @@ const Member = () => {
 	return (
 		<div className="flex flex-col pt-2 gap-2 text-white relative h-full z-10 overflow-auto scroll-style">
 			<div className="font-semibold text-lg w-full text-center mt-2">
-				Members ( {selectedChat?.users?.length} )
+				Membros ( {selectedChat?.users?.length} )
 			</div>
 			{memberAddBox ? (
 				<MemberAdd setMemberAddBox={setMemberAddBox} />

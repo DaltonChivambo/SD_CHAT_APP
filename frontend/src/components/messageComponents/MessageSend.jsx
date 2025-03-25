@@ -144,7 +144,7 @@ const MessageSend = ({ chatId }) => {
 				<input
 					type="text"
 					className="outline-none p-2 w-full bg-transparent"
-					placeholder="Type a message"
+					placeholder="Escreva uma mensagem . . ."
 					value={newMessage}
 					onChange={(e) => handleTyping(e)}
 				/>

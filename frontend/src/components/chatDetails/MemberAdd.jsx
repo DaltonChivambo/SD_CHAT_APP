@@ -65,7 +65,7 @@ const MemberAdd = ({ setMemberAddBox }) => {
 	}, [inputUserName]);
 	const handleAddUser = (userId, userName) => {
 		if (selectedChat?.users?.find((user) => user?._id === userId)) {
-			toast.warn(`${userName} is already added`);
+			toast.warn(`${userName} Já está no grupo`);	
 			setAddUserId("");
 			setAddUserName("");
 
@@ -91,7 +91,7 @@ const MemberAdd = ({ setMemberAddBox }) => {
 		})
 			.then((res) => res.json())
 			.then((json) => {
-				toast.success(`${addUserName} Added successfully`);
+				toast.success(`${addUserName} Adicionado ao grupo`);
 				setAddUserId("");
 				setAddUserName("");
 				dispatch(addSelectedChat(json?.data));
@@ -137,7 +137,7 @@ const MemberAdd = ({ setMemberAddBox }) => {
 						{selectedUsers?.length === 0 && (
 							<div className="w-full h-full flex justify-center items-center text-white">
 								<h1 className="text-base font-semibold">
-									No users registered.
+									Sem Usuários Encontrados
 								</h1>
 							</div>
 						)}
@@ -181,7 +181,7 @@ const MemberAdd = ({ setMemberAddBox }) => {
 					<div className="px-2 w-full fixed bottom-1 right-0">
 						<div className="w-full h-12 border-slate-500 bg-blue-950 border rounded-lg flex justify-between items-center p-2 font-semibold gap-2 transition-all cursor-pointer text-white ">
 							<h1 className="line-clamp-1">
-								Confirm addition of '{addUserName}'?
+								Deseja adicionar '{addUserName}'?
 							</h1>
 							<div className="flex gap-1">
 								<div

@@ -14,12 +14,12 @@ const ProfileDetail = () => {
 		<div className="flex -m-2 sm:-m-4 flex-col items-center my-6 text-slate-300 min-h-screen w-full fixed top-0 justify-center z-50">
 			<div className="p-3 pt-4 w-[80%] sm:w-[60%] md:w-[50%] lg:w-[40%] min-w-72 max-w-[1000px] border border-slate-400 bg-slate-800 rounded-lg h-fit mt-5 transition-all relative">
 				<h2 className="text-2xl underline underline-offset-8 font-semibold text-slate-100 w-full text-center mb-2">
-					Profile
+					Perfil
 				</h2>
 				<div className="w-full py-4 justify-evenly flex flex-wrap items-center gap-3">
 					<div className="self-end">
 						<h3 className="text-xl font-semibold p-1">
-							Name : {user.firstName} {user.lastName}
+							Nome : {user.firstName} {user.lastName}
 						</h3>
 						<h3 className="text-xl font-semibold p-1">
 							Email : {user.email}
@@ -31,7 +31,7 @@ const ProfileDetail = () => {
 							}}
 							className="bg-red-500 hover:bg-red-700 text-white font-bold py-1.5 px-4 rounded mt-3 hidden sm:block"
 						>
-							Logout
+							Sair
 						</button>
 					</div>
 					<div className="self-end flex w-full sm:w-fit items-center justify-evenly sm:flex-col">
@@ -45,7 +45,7 @@ const ProfileDetail = () => {
 								onClick={handleUpdate}
 								className="bg-blue-800 hover:bg-blue-900 text-white font-bold py-1.5 px-4 rounded sm:mt-3"
 							>
-								Update
+								Atualizar
 							</button>
 							<button
 								onClick={() => {
@@ -54,7 +54,7 @@ const ProfileDetail = () => {
 								}}
 								className="bg-red-500 hover:bg-red-700 text-white font-bold py-1.5 px-4 rounded mt-3 sm:hidden"
 							>
-								Logout
+								Sair
 							</button>
 						</div>
 					</div>

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import Logo from "../assets/logo.jpeg";
+import Logo from "../assets/logo.png";
 import { useDispatch, useSelector } from "react-redux";
 import { addAuth } from "../redux/slices/authSlice";
 import handleScrollTop from "../utils/handleScrollTop";
@@ -128,7 +128,7 @@ const Header = () => {
 					/>
 				</Link>
 				<Link to={"/"}>
-					<span>ChatApp</span>
+					<span>SD-APP</span>
 				</Link>
 			</div>
 
@@ -140,7 +140,7 @@ const Header = () => {
 								? "animate-bounce"
 								: "animate-none"
 						}`}
-						title={`You have ${newMessageRecieved.length} new notifications`}
+						title={`Tem ${newMessageRecieved.length} novas notificações`}
 						onClick={() => dispatch(setNotificationBox(true))}
 					>
 						<MdNotificationsActive fontSize={25} />
@@ -149,7 +149,7 @@ const Header = () => {
 						</span>
 					</span>
 					<span className="whitespace-nowrap ml-2">
-						Hi, {user.firstName}
+						Olá, {user.firstName}
 					</span>
 					<div
 						ref={headerUserBox}
@@ -186,7 +186,7 @@ const Header = () => {
 							>
 								<div className="flex items-center justify-between w-2/4">
 									<PiUserCircleLight fontSize={23} />
-									<span>Profile</span>
+									<span>Perfil</span>
 								</div>
 							</div>
 							<div
@@ -195,7 +195,7 @@ const Header = () => {
 							>
 								<div className="flex items-center justify-between w-2/4">
 									<IoLogOutOutline fontSize={21} />
-									<span>Logout</span>
+									<span>Sair</span>
 								</div>
 							</div>
 						</div>
@@ -204,7 +204,7 @@ const Header = () => {
 			) : (
 				<Link to={"/signin"}>
 					<button className="py-2 px-4 border border-slate-400 rounded-full bg-gradient-to-tr to-slate-800 text-black via-white  from-slate-800 hover:bg-gradient-to-br shadow-sm hover:shadow-white">
-						SignIn
+						Entrar
 					</button>
 				</Link>
 			)}

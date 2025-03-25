@@ -83,7 +83,7 @@ const UserSearch = () => {
 				dispatch(addSelectedChat(json?.data));
 				dispatch(setLoading(false));
 				socket.emit("chat created", json?.data, authUserId);
-				toast.success("Created & Selected chat");
+				toast.success("Chat criado com sucesso");
 				dispatch(setUserSearchBox());
 			})
 			.catch((err) => {
@@ -95,7 +95,7 @@ const UserSearch = () => {
 	return (
 		<>
 			<div className="p-6 w-full h-[7vh] font-semibold flex justify-between items-center bg-slate-800 text-white border-slate-500 border-r">
-				<h1 className="mr-2 whitespace-nowrap">New Chat</h1>
+				<h1 className="mr-2 whitespace-nowrap">Novo Chat</h1>
 				<div className="w-2/3 flex flex-nowrap items-center gap-2">
 					<input
 						id="search"
@@ -117,7 +117,7 @@ const UserSearch = () => {
 						{selectedUsers?.length === 0 && (
 							<div className="w-full h-full flex justify-center items-center text-white">
 								<h1 className="text-base font-semibold">
-									No users registered.
+									Sem usuários registrados.
 								</h1>
 							</div>
 						)}

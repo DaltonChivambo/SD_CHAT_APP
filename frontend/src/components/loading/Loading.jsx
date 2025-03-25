@@ -20,7 +20,7 @@ const Loading = () => {
 				{showCancel && (
 					<div className="font-bold  cursor-pointer border border-slate-700 py-2 px-4 rounded-md bg-slate-900 hover:bg-black/80">
 						<span onClick={() => dispatch(setLoading(false))}>
-							Cancel
+							cancelar
 						</span>
 					</div>
 				)}

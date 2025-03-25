@@ -24,14 +24,14 @@ const ChatSetting = () => {
 		) {
 			setConfirm("clear-chat");
 		} else {
-			toast.warn("You're not admin");
+			toast.warn("Você não é o administrador");
 		}
 	};
 	const handleDeleteGroup = () => {
 		if (authUserId === selectedChat?.groupAdmin?._id) {
 			setConfirm("delete-group");
 		} else {
-			toast.warn("You're not admin");
+			toast.warn("Você não é o administrador");
 		}
 	};
 	const handleDeleteChat = () => {
@@ -63,16 +63,16 @@ const ChatSetting = () => {
 				if (json?.message === "success") {
 					dispatch(addAllMessages([]));
 					socket.emit("clear chat", selectedChat._id);
-					toast.success("Cleared all messages");
+					toast.success("Todas mensagens apagadas com sucesso");
 				} else {
-					toast.error("Failed to clear chat");
+					toast.error("Falha ao limpar chat");
 				}
 			})
 			.catch((err) => {
 				console.log(err);
 				setConfirm("");
 				dispatch(setLoading(false));
-				toast.error("Failed to clear chat");
+				toast.error("Falha ao limpar chat");
 			});
 	};
 	// handle Delete Chat Call
@@ -101,28 +101,28 @@ const ChatSetting = () => {
 					dispatch(deleteSelectedChat(chat._id));
 					socket.emit("delete chat", chat, authUserId);
 
-					toast.success("Chat deleted successfully");
+					toast.success("Todas mensagens apagadas com sucesso");
 				} else {
-					toast.error("Failed to delete chat");
+					toast.error("Falha ao limpar chat");
 				}
 			})
 			.catch((err) => {
 				console.log(err);
 				dispatch(setLoading(false));
-				toast.error("Failed to delete chat");
+				toast.error("Falha ao limpar chat");
 			});
 	};
 
 	return (
 		<div className="flex flex-col p-2 gap-2 text-white relative h-full z-10 overflow-auto scroll-style">
 			<h1 className="font-semibold text-lg w-full text-center my-2">
-				Setting
+				Definições
 			</h1>
 			<div
 				onClick={handleClearChat}
 				className="w-full h-8 border-slate-500 border text-sm rounded-lg flex justify-between items-center p-2 font-normal gap-2 transition-all cursor-pointer text-white"
 			>
-				<h1>Clear Chat</h1>
+				<h1>Apagar Chat</h1>
 				<CiCircleInfo
 					fontSize={15}
 					title={
@@ -138,7 +138,7 @@ const ChatSetting = () => {
 					onClick={handleDeleteGroup}
 					className="w-full h-8 border-slate-500 border text-sm rounded-lg flex justify-between items-center p-2 font-normal gap-2 transition-all cursor-pointer text-white"
 				>
-					<h1>Delete Group</h1>
+					<h1>Apagar Grupo</h1>
 					<CiCircleInfo
 						fontSize={15}
 						title="Admin access only"
@@ -169,10 +169,10 @@ const ChatSetting = () => {
 					>
 						<h1>
 							{isConfirm === "clear-chat"
-								? "Clear chat confirmation?"
+								? "Tem certeza que deseja limpar o chat?"
 								: isConfirm === "delete-group"
-								? "Delete group confirmation?"
-								: "Delete chat confirmation"}
+								? "Tem certeza que deseja apagar o grupo?"
+								: "Limpar chat"}
 						</h1>
 						<div className="flex gap-1">
 							<div

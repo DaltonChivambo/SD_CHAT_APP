@@ -78,7 +78,7 @@ const Home = () => {
 				dispatch(addAllMessages([]));
 			}
 			dispatch(deleteSelectedChat(chatId));
-			toast.success("Chat deleted successfully");
+			toast.success("Chat apagado com sucesso");
 		};
 		socket.on("delete chat", deleteChatHandler);
 		return () => {
@@ -90,7 +90,7 @@ const Home = () => {
 	useEffect(() => {
 		const chatCreatedHandler = (chat) => {
 			dispatch(addNewChat(chat));
-			toast.success("Created & Selected chat");
+			toast.success("Chat criado com sucesso");
 		};
 		socket.on("chat created", chatCreatedHandler);
 		return () => {

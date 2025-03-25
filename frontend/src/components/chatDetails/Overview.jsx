@@ -79,7 +79,7 @@ const Overview = () => {
 			</div>
 			{changeNameBox && (
 				<>
-					<h1>Rename Group Chat :</h1>
+					<h1>Renomeiar grupo :</h1>
 					<div className="flex gap-1">
 						<input
 							type="text"

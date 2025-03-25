@@ -81,7 +81,7 @@ const GroupChatBox = () => {
 		if (!existUsers) {
 			setGroupUsers([...isGroupUsers, user]);
 		} else {
-			toast.warn('"' + user?.firstName + '" already Added');
+			toast.warn('"' + user?.firstName + '" Já está no grupo');
 		}
 	};
 
@@ -95,10 +95,10 @@ const GroupChatBox = () => {
 
 	const handleCreateGroupChat = async () => {
 		if (isGroupUsers.length < 2) {
-			toast.warn("Please select atleast 2 users");
+			toast.warn("Selecione pelo menos 2 usuários");
 			return;
 		} else if (!isGroupName.trim()) {
-			toast.warn("Please enter group name");
+			toast.warn("Por favor, insira o nome do grupo");
 			return;
 		}
 		dispatch(setGroupChatBox());
@@ -120,8 +120,8 @@ const GroupChatBox = () => {
 				dispatch(addSelectedChat(json?.data));
 				dispatch(setGroupChatId(json?.data?._id));
 				dispatch(setLoading(false));
-				socket.emit("chat created", json?.data, authUserId);
-				toast.success("Created & Selected chat");
+				socket.emit("chat criado", json?.data, authUserId);
+				toast.success("Chat criado e selecionado");
 				// console.log(json);
 			})
 			.catch((err) => {
@@ -134,7 +134,7 @@ const GroupChatBox = () => {
 		<div className="flex -m-2 sm:-m-4 flex-col items-center my-6 text-slate-300 min-h-screen w-full fixed top-0 justify-center z-50">
 			<div className="p-3 pt-4 w-[80%] sm:w-[60%] md:w-[50%] lg:w-[40%] min-w-72 max-w-[1000px] border border-slate-400 bg-slate-800 rounded-lg h-fit mt-5 transition-all relative">
 				<h2 className="text-2xl underline underline-offset-8 font-semibold text-slate-100 w-full text-center mb-2">
-					Create a Group
+					Criar Grupo
 				</h2>
 				<div className="w-full py-4 justify-evenly flex flex-wrap items-center gap-3">
 					<div className="w-full flex flex-nowrap items-center justify-center gap-2">
@@ -183,7 +183,7 @@ const GroupChatBox = () => {
 								{selectedUsers?.length === 0 && (
 									<div className="w-full h-full flex justify-center items-center text-white">
 										<h1 className="text-base font-semibold">
-											No users registered.
+											Sem usuários registrados.
 										</h1>
 									</div>
 								)}
