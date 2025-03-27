@@ -8,7 +8,7 @@ const Footer = () => {
 			<div className="flex items-center justify-start w-full p-4 flex-wrap">		
 			</div>
 			<h1 className="font-bold">
-				Todos os direitos Reservados 2025 &copy; SD-APP
+				Todos os direitos Reservados 2025 &copy; SD-Chat
 			</h1>
 		</div>
 	);

@@ -123,12 +123,12 @@ const Header = () => {
 				<Link to={"/"}>
 					<img
 						src={Logo}
-						alt="ChatApp"
+						alt="SD-Chat"
 						className="h-12 w-12 rounded-tr-full rounded-tl-full rounded-br-full"
 					/>
 				</Link>
 				<Link to={"/"}>
-					<span>SD-APP</span>
+					<span>SD-Chat</span>
 				</Link>
 			</div>
 
