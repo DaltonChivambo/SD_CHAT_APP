@@ -7,8 +7,8 @@ export const checkValidSignInFrom = (email, password) => {
 		/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^((0-9)|(a-z)|(A-Z)|\s)]).{8,}$/.test(
 			password
 		);
-	if (!isEmailValid) return "Invalid email format";
-	if (!isPasswordValid) return "Invalid password";
+	if (!isEmailValid) return "Formato de email inválido";
+	if (!isPasswordValid) return "Senha inválida";
 	return null;
 };
 export const checkValidSignUpFrom = (firstName, lastName, email, password) => {
@@ -17,21 +17,21 @@ export const checkValidSignUpFrom = (firstName, lastName, email, password) => {
 	const isEmailValid = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(
 		email
 	);
-	if (!isFirstValid) return "Invalid FirstName Format";
-	if (!isLastValid) return "Invalid LastName Format";
-	if (!isEmailValid) return "Invalid email format";
-	if (password.length < 8) return "Min 8 characters";
-	if (!/[a-z]/.test(password)) return "Needs 1 lowercase letter";
-	if (!/[A-Z]/.test(password)) return "Needs 1 uppercase lette";
-	if (!/\d/.test(password)) return "Needs 1 number";
+	if (!isFirstValid) return "Primeiro nome inválido";
+	if (!isLastValid) return "Ultimo nome inválido";
+	if (!isEmailValid) return "Formato de email inválido";
+	if (password.length < 8) return "Min 8 caracteres";
+	if (!/[a-z]/.test(password)) return "Precisa de 1 letra minúscula";
+	if (!/[A-Z]/.test(password)) return "Precisa de 1 letra maiúscula";
+	if (!/\d/.test(password)) return "Precisa de 1 número";
 	if (!/[^((0-9)|(a-z)|(A-Z)|\s)]/.test(password))
-		return "Needs 1 special char";
+		return "Precisa de 1 caractere especial";
 	return null;
 };
 export const checkValidForgotFrom = (email) => {
 	const isEmailValid = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(
 		email
 	);
-	if (!isEmailValid) return "Invalid email format";
+	if (!isEmailValid) return "Formato de email inválido";
 	return null;
 };

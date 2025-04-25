@@ -105,13 +105,13 @@ const Overview = () => {
 				</h2>
 			</div>
 			<div className="text-sm">
-				<h1>Last Updated</h1>
+				<h1>Última atualização</h1>
 				<h2 className="opacity-50">
 					{SimpleDateAndTime(selectedChat?.updatedAt)}
 				</h2>
 			</div>
 			<div className="text-sm">
-				<h1>Last Message</h1>
+				<h1>Última mensagem</h1>
 				<h2 className="opacity-50">
 					{SimpleDateAndTime(selectedChat?.latestMessage?.updatedAt)}
 				</h2>

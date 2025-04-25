@@ -1,17 +1,22 @@
 import React from "react";
 import { FaPenAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Footer = () => {
-	return (
-		<div className="w-full min-h-32  shadow-gray-950 shadow-inner flex flex-col justify-between items-start px-4 py-8 bg-slate-800 text-white">
-			<div className="flex items-center justify-start w-full p-4 flex-wrap">		
-			</div>
-			<h1 className="font-bold">
-				Todos os direitos Reservados 2025 &copy; SD-Chat
-			</h1>
-		</div>
-	);
+    return (
+        <motion.footer
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="w-full  shadow-lg border-white/20 py-6 px-4 flex flex-col items-center text-white"
+        >
+
+            <h1 className="text-center text-sm font-semibold">
+                Todos os direitos reservados 2025 &copy; SD-Chat
+            </h1>
+        </motion.footer>
+    );
 };
 
 export default Footer;

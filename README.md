@@ -1,188 +1,246 @@
-# Chat Application MERN-Stack Web Application.
+# Chat Application - Aplicação Web MERN-Stack
 
 <p align="center">
-  <b style="color: blue;  ">Visitor count</b>
+  <b style="color: blue;">Contador de Visitantes</b>
   <br>
-  <a style="" href="https://github.com/akashdeep023">
-  <img src="https://profile-counter.glitch.me/chat-app/count.svg" />
+  <a href="https://github.com/DaltonChivambo/SD_CHAT_APP">
+    <img src="https://profile-counter.glitch.me/SD_CHAT_APP/count.svg" />
   </a>
 </p>
 
----
+## Visão Geral do Projeto
 
-<a style="" href="https://chat-application-jack.vercel.app/">
-  
-![Macbook-Air-Iphone-13](https://github.com/user-attachments/assets/24edbef0-083f-44d4-9717-3e659ecb404b)
+Uma aplicação de chat em tempo real construída usando a stack MERN (MongoDB, Express, React, Node.js) e estilizada com Tailwind CSS. A aplicação suporta autenticação de usuários, chats em grupo e mensagens instantâneas com atualizações em tempo real via Socket.IO.
 
-</a>
+## Funcionalidades
 
----
+### 1. Autenticação e Gerenciamento de Usuários
+- **Registro e Login**: Sistema completo de autenticação de usuários
+- **Perfil de Usuário**: Gerenciamento de informações pessoais
+- **Segurança**: Proteção de rotas e dados com JWT (JSON Web Tokens)
 
-## Project Overview
+### 2. Chat Privado
+- **Conversas 1-1**: Chat privado entre dois usuários
+- **Histórico de Mensagens**: Armazenamento e recuperação de mensagens anteriores
+- **Notificações em Tempo Real**: Alertas instantâneos de novas mensagens
 
-_A real-time **Chat application** built using the MERN stack (MongoDB, Express, React, Node.js) and styled with Tailwind CSS. It supports user authentication, group chats, and instant messaging with real-time updates via Socket.IO. The application is fully responsive and provides smooth communication with features like notifications and state management using Redux._
+### 3. Grupos de Chat
+- **Criação de Grupos**: Capacidade de criar grupos com múltiplos usuários
+- **Administração de Grupos**: 
+  - Adicionar/remover membros
+  - Renomear grupos
+  - Configurações de administrador
+- **Chat em Grupo**: Comunicação em tempo real entre todos os membros
 
-## Technologies & Packages Used
+### 4. Gerenciamento de Conversas
+- **Limpar Chat**: Opção para apagar todo o histórico de mensagens
+- **Excluir Chat**: Remover conversas individuais ou grupos
+- **Busca de Usuários**: Sistema de busca para encontrar e adicionar novos contatos
 
--   **MongoDB**: NoSQL database for flexible and scalable data storage.
--   **Express.js**: Web application framework for Node.js, providing robust features for web and mobile applications.
--   **Node.js**: JavaScript runtime for server-side development.
--   **React.js**: A JavaScript library for building reusable UI components and efficient single-page application views.
--   **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
--   **Socket.IO**: Enables real-time, bidirectional and event-based communication.
--   **JWT (JSON Web Tokens)**: Securely transmits information between parties as a JSON object.
--   **Redux**: A Predictable State Container for JavaScript Apps.
--   **React-Toastify**: A JavaScript library for providing toast notifications in React.
+### 5. Interface e Experiência do Usuário
+- **Design Responsivo**: Interface adaptável para diferentes dispositivos
+- **Indicador de Digitação**: Mostra quando outros usuários estão digitando
+- **Notificações Toast**: Alertas visuais para ações importantes
+- **Tema Escuro**: Interface com tema escuro para melhor experiência visual
 
-## Key Features
+### 6. Recursos Técnicos
+- **Comunicação em Tempo Real**: Implementação com Socket.IO
+- **Gerenciamento de Estado**: Utilização do Redux para controle de estado
+- **Persistência de Dados**: Armazenamento em MongoDB
+- **API RESTful**: Backend estruturado com Express.js
 
--   **User Authentication:** SignIn, SignUp, and Logout functionality.
--   **Real-time Chat:** Users can send and receive messages in real-time.
--   **Group Chat:** Create and participate in group chats.
--   **Message Notifications:** Get notified of new messages with sound and visual alerts.
--   **State Management:** Manage application state efficiently using Redux.
--   **Responsive Design:** Tailwind CSS for a responsive and modern user interface.
-<!-- -   **User Status:** Display online/offline status of users. -->
+## Tecnologias Utilizadas
 
-## How to Install
+- **MongoDB**: Banco de dados NoSQL para armazenamento flexível e escalável
+- **Express.js**: Framework web para Node.js
+- **Node.js**: Ambiente de execução JavaScript no servidor
+- **React.js**: Biblioteca JavaScript para construção de interfaces de usuário
+- **Tailwind CSS**: Framework CSS para desenvolvimento rápido de interfaces
+- **Socket.IO**: Permite comunicação bidirecional em tempo real
+- **JWT (JSON Web Tokens)**: Para autenticação segura
+- **Redux**: Gerenciamento de estado da aplicação
+- **React-Toastify**: Biblioteca para notificações toast
 
-Follow these steps to set up and run the project locally:
+## Como Instalar e Executar
 
-1.  **Clone the Repository:**
+1. **Clone o Repositório:**
+   ```bash
+   git clone https://github.com/DaltonChivambo/SD_CHAT_APP.git
+   cd SD_CHAT_APP
+   ```
 
-    ```bash
-    git clone https://github.com/akashdeep023/Chat_App.git
-    cd Chat_App
-    ```
+2. **Instale as Dependências:**
+   Para o Frontend:
+   ```bash
+   cd frontend
+   npm install
+   ```
 
-2.  **Install Dependencies:**
-    Frontend Folder :
+   Para o Backend:
+   ```bash
+   cd backend
+   npm install
+   ```
 
-    ```bash
-    cd frontend
-    npm install
-    ```
+3. **Configure as Variáveis de Ambiente:**
+   No Frontend, crie um arquivo `.env`:
+   ```
+   VITE_BACKEND_URL=http://localhost:9000
+   ```
 
-    Backend Folder :
+   No Backend, crie um arquivo `.env`:
+   ```
+   FRONTEND_URL=http://localhost:5173
+   MONGODB_URI=mongodb://127.0.0.1:27017/chat-app
+   PORT=9000
+   JWT_SECRET=sua-chave-secreta
+   ```
 
-    ```bash
-    cd backend
-    npm install
-    ```
+4. **Execute a Aplicação:**
+   Frontend:
+   ```bash
+   npm run dev
+   ```
 
-3.  **Set Up Environment Variables:**
+   Backend:
+   ```bash
+   npm run dev
+   ```
 
-    Configure the following environment variables by creating a .env file in the root of Forntend and Backend Folder:
+5. **Acesse a Aplicação:**
+   Abra `http://localhost:5173` no seu navegador
 
-    Frontend Folder :
+## Screenshots da Aplicação
 
-    ```bash
-    VITE_BACKEND_URL=http://localhost:9000
-    ```
+### Tela de Login
+![Tela de Login](PrintScreen/01_login.png)
+Interface de login da aplicação.
 
-    Backend Folder :
+### Tela de Registro
+![Tela de Registro](PrintScreen/02_sign-in.png)
+Página para criação de nova conta.
 
-    ```bash
-    FRONTEND_URL=http://localhost:5173
-    MONGODB_URI=mongodb://127.0.0.1:27017/chat-app
-    PORT=9000
-    JWT_SECRET=secret-kvndkvdlkajkhkJkBiu6JJNjkbhkvnskcmhLJ5dKbkjsamnv
-    ```
+### Conversa Privada
+![Conversa Privada](PrintScreen/03_conversa_privada.png)
+Interface de chat privado entre usuários.
 
-    Replace the values with your specific configurations.
+### Conversa em Grupo
+![Conversa em Grupo](PrintScreen/04_conversa_grupo.png)
+Interface de chat em grupo.
 
-4.  **Run the Application:**
+### Configurações do Grupo
+![Configurações do Grupo](PrintScreen/05_definicoes_grupo.png)
+Configurações e opções do grupo.
 
-    Frontend Folder :
+### Criar Novo Grupo
+![Criar Novo Grupo](PrintScreen/06_criar_novo_grupo.png)
+Interface para criação de novos grupos.
 
-    ```bash
-    npm run dev
-    ```
+## Estrutura do Projeto
 
-    Backend Folder :
+```
+├── frontend
+│   ├── public
+│   ├── src
+│   │   ├── assets
+│   │   ├── components
+│   │   ├── pages
+│   │   ├── redux
+│   │   ├── socket
+│   │   ├── utils
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   └── index.css
+│   ├── index.html
+│   ├── tailwind.config.js
+│   ├── .env
+│   └── package.json
+├── backend
+│   ├── config
+│   ├── controllers
+│   ├── middlewares
+│   ├── models
+│   ├── routes
+│   ├── server.js
+│   ├── .env
+│   └── package.json
+└── README.md
+```
 
-    ```bash
-    npm run dev
-    ```
+## Recursos Principais
 
-5.  **Open in Your Browser:**
+- Autenticação de usuários (login/registro)
+- Chat em tempo real
+- Chats em grupo
+- Notificações de mensagens
+- Interface responsiva
+- Gerenciamento de estado com Redux
+- Comunicação em tempo real com Socket.IO
 
-Open `http://localhost:5173` in your web browser.
+## Autor
 
-## Project Structure
+Dalton Chivambo \
+GitHub: [@DaltonChivambo](https://github.com/DaltonChivambo) \
 
-    ├── frontend
-    │   ├── public
-    │   ├── src
-    │   │   ├── assets
-    │   │   ├── components
-    │   │   ├── pages
-    │   │   ├── redux
-    │   │   ├── socket
-    │   │   ├── utils
-    │   │   ├── App.jsx
-    │   │   ├── main.jsx
-    │   │   └── index.css
-    │   ├── index.html
-    │   ├── tailwind.config.js
-    │   ├── .env
-    │   └── package.json
-    ├── backend
-    │   ├── config
-    │   ├── controllers
-    │   ├── middlewares
-    │   ├── models
-    │   ├── routes
-    │   ├── server.js
-    │   ├── .env
-    │   └── package.json
-    └── README.md
+## Agradecimentos
 
-## Author
+Obrigado por explorar o Chat App! Seu feedback é valioso. Se tiver alguma sugestão ou pensamento, sinta-se à vontade para compartilhar. 😊
 
-Akash Deep \
-Email: contact.akashdeep023@gmail.com \
-LinkedIn : https://www.linkedin.com/in/akashdeep023/
+## Logs do Sistema
 
-## Images
-**Profile**
-![Macbook-Air-localhost](https://github.com/user-attachments/assets/7ea906d8-10a9-4e79-a3aa-46f45dd328bb)
+### 1. Logs de Autenticação
+- **Registro de Usuário**: Log detalhado de novos registros com timestamp
+- **Login/Logout**: Registro de tentativas de login e logout
+- **Falhas de Autenticação**: Log de tentativas falhas de login
 
-**Group Create**
-![Macbook-Air-localhost (5)](https://github.com/user-attachments/assets/49cff226-f372-4668-8095-8f741265edc3)
+### 2. Logs de Mensagens
+- **Envio de Mensagens**: 
+  - Registro de mensagens enviadas com timestamp
+  - Identificação do remetente e destinatário
+  - Status de entrega da mensagem
+- **Recebimento de Mensagens**:
+  - Log de mensagens recebidas
+  - Confirmação de leitura
+  - Status de visualização
 
-**Chat & Group Overview**
-![Macbook-Air-localhost (2)](https://github.com/user-attachments/assets/1c367efe-4059-432c-8e6c-86ccb41bf712)
+### 3. Logs de Grupos
+- **Criação de Grupos**:
+  - Registro do criador do grupo
+  - Lista de membros iniciais
+  - Timestamp de criação
+- **Modificações em Grupos**:
+  - Log de adição/remoção de membros
+  - Alterações de nome do grupo
+  - Mudanças de administrador
+- **Exclusão de Grupos**:
+  - Registro de grupos excluídos
+  - Usuário que realizou a exclusão
+  - Timestamp da exclusão
 
-**Chat & Group Members**
-![Macbook-Air-localhost (3)](https://github.com/user-attachments/assets/58764949-ac05-4c6b-ae6d-34c1d3232f64)
+### 4. Logs de Sistema
+- **Conexões Socket.IO**:
+  - Registro de conexões estabelecidas
+  - Desconexões de usuários
+  - Endereços IP dos clientes
+- **Erros do Sistema**:
+  - Log de erros de conexão
+  - Falhas de autenticação
+  - Problemas de banco de dados
+- **Ações Administrativas**:
+  - Registro de ações de administradores
+  - Modificações em configurações
+  - Acessos privilegiados
 
-**Chat & Group Setting**
-![Macbook-Air-localhost (4)](https://github.com/user-attachments/assets/33001244-8e21-46ff-b047-14bcac81829d)
+### 5. Logs de Performance
+- **Tempo de Resposta**:
+  - Log de latência das requisições
+  - Tempo de processamento
+  - Uso de recursos
+- **Uso de Memória**:
+  - Monitoramento de uso de memória
+  - Alocação de recursos
+  - Limpeza de cache
 
-**Add User in Group (Admin Access)**
-![Macbook-Air-localhost (1)](https://github.com/user-attachments/assets/3dbf0fdb-4754-4d77-af5e-81fbf7a681d5)
-
-**Remove User in Group (Admin Access)**
-![Macbook-Air-localhost (6)](https://github.com/user-attachments/assets/526d6786-8813-4997-922c-bc3bfba2ee8b)
-
-**User Search & Chat**
-![Macbook-Air-localhost (7)](https://github.com/user-attachments/assets/b187e389-0fac-4c50-ba9c-aee1f9f55d66)
-
-**Notification Box**
-![Macbook-Air-localhost (8)](https://github.com/user-attachments/assets/376bdfd8-7ffa-435b-b506-0a7405d5137c)
-
-**Notification Alert**
-![Screenshot 2024-07-22 231334](https://github.com/user-attachments/assets/fbaa92af-ee49-48b7-8442-cd8f8cc4d3bc)
-
-**Shimmer**
-![image](https://github.com/user-attachments/assets/45b6665a-9e2d-4a61-b092-7cb7a0b775be)
-
-**Footer**
-![Screenshot 2024-07-22 154954](https://github.com/user-attachments/assets/82daa377-4285-45a3-af99-f0920344fa0b)
-
-## Thank You
-
-Thank you for exploring Chat App! Your feedback is valuable. If you have any suggestions or thoughts, feel free to share them with us. 😊
-
----
+### 6. Logs de Segurança
+- **Tentativas de Acesso**:
+  - Registro de tentativas de acesso

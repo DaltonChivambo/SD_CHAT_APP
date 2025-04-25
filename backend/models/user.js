@@ -22,7 +22,7 @@ const userSchema = new mongoose.Schema(
 		image: {
 			type: String,
 			default:
-				"https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg",
+				"https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg",
 		},
 	},
 	{

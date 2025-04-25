@@ -99,15 +99,15 @@ const Home = () => {
 	});
 
 	return (
-		<div className="flex w-full border-slate-500 border rounded-sm shadow-md shadow-black relative">
+		<div className="flex w-full rounded-sm shadow-md shadow-black relative">
 			<div
 				className={`${
 					selectedChat && "hidden"
-				} sm:block sm:w-[40%] w-full h-[80vh] bg-black/40 border-r border-slate-500 relative`}
+				} sm:block sm:w-[40%] w-full h-[80vh] relative`}
 			>
-				<div className="absolute bottom-3 right-6 cursor-pointer text-white">
+				<div className="absolute bottom-0 right-1 cursor-pointer text-white">
 					<MdChat
-						title="New Chat"
+						title="Novo Chat"
 						fontSize={32}
 						onClick={() => dispatch(setUserSearchBox())}
 					/>

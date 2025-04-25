@@ -206,10 +206,13 @@ io.on("connection", (socket) => {
 
 
 	const typingHandler = (room) => {
-		socket.in(room).emit("typing");
+		// Envia apenas para outros usuários na sala
+		socket.to(room).emit("typing");
 	};
+	
 	const stopTypingHandler = (room) => {
-		socket.in(room).emit("stop typing");
+		// Envia apenas para outros usuários na sala
+		socket.to(room).emit("stop typing");
 	};
 
 	// Clear, Delete and Create chat handlers
