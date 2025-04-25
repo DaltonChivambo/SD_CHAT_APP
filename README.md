@@ -8,6 +8,10 @@
   </a>
 </p>
 
+## Créditos
+
+Este projeto é um fork do trabalho original desenvolvido por [@akashdeep023](https://github.com/akashdeep023). O repositório original pode ser encontrado em [Chat_App](https://github.com/akashdeep023/Chat_App).
+
 ## Visão Geral do Projeto
 
 Uma aplicação de chat em tempo real construída usando a stack MERN (MongoDB, Express, React, Node.js) e estilizada com Tailwind CSS. A aplicação suporta autenticação de usuários, chats em grupo e mensagens instantâneas com atualizações em tempo real via Socket.IO.
@@ -177,21 +181,12 @@ Interface para criação de novos grupos.
 - Gerenciamento de estado com Redux
 - Comunicação em tempo real com Socket.IO
 
-## Autor
-
-Dalton Chivambo \
-GitHub: [@DaltonChivambo](https://github.com/DaltonChivambo) \
-
-## Agradecimentos
-
-Obrigado por explorar o Chat App! Seu feedback é valioso. Se tiver alguma sugestão ou pensamento, sinta-se à vontade para compartilhar. 😊
 
 ## Logs do Sistema
 
 ### 1. Logs de Autenticação
 - **Registro de Usuário**: Log detalhado de novos registros com timestamp
 - **Login/Logout**: Registro de tentativas de login e logout
-- **Falhas de Autenticação**: Log de tentativas falhas de login
 
 ### 2. Logs de Mensagens
 - **Envio de Mensagens**: 
@@ -201,21 +196,11 @@ Obrigado por explorar o Chat App! Seu feedback é valioso. Se tiver alguma suges
 - **Recebimento de Mensagens**:
   - Log de mensagens recebidas
   - Confirmação de leitura
-  - Status de visualização
 
 ### 3. Logs de Grupos
 - **Criação de Grupos**:
   - Registro do criador do grupo
-  - Lista de membros iniciais
-  - Timestamp de criação
 - **Modificações em Grupos**:
-  - Log de adição/remoção de membros
-  - Alterações de nome do grupo
-  - Mudanças de administrador
-- **Exclusão de Grupos**:
-  - Registro de grupos excluídos
-  - Usuário que realizou a exclusão
-  - Timestamp da exclusão
 
 ### 4. Logs de Sistema
 - **Conexões Socket.IO**:
@@ -228,19 +213,5 @@ Obrigado por explorar o Chat App! Seu feedback é valioso. Se tiver alguma suges
   - Problemas de banco de dados
 - **Ações Administrativas**:
   - Registro de ações de administradores
-  - Modificações em configurações
-  - Acessos privilegiados
 
-### 5. Logs de Performance
-- **Tempo de Resposta**:
-  - Log de latência das requisições
-  - Tempo de processamento
-  - Uso de recursos
-- **Uso de Memória**:
-  - Monitoramento de uso de memória
-  - Alocação de recursos
-  - Limpeza de cache
 
-### 6. Logs de Segurança
-- **Tentativas de Acesso**:
-  - Registro de tentativas de acesso
