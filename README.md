@@ -8,9 +8,6 @@
   </a>
 </p>
 
-## Créditos
-
-Este projeto é um fork do trabalho original desenvolvido por [@akashdeep023](https://github.com/akashdeep023). O repositório original pode ser encontrado em [Chat_App](https://github.com/akashdeep023/Chat_App).
 
 ## Visão Geral do Projeto
 
